@@ -13,13 +13,20 @@
   Name: <input ng-model="name"></br>
   Choose your weapon and fight!
 
-  <select ng-model="myWeapon" ng-options="weapon for weapon in weapons"></select>
+  <select ng-model="myWeapon" ng-options="weapon for weapon in weapons" ng-change="gameResult = null"></select>
 
   <h4><b>{{name}}</b> vs. <b>The Hulk</b></h4>
 
   <img src="http://cdn-0.adherents.com/lit/comics/img/h/Hulk.jpg" height="220px;" width="150px;"></img>
 
-  <p><a class="btn btn-lg btn-success" ng-href="#" ng-click="playGame()">FIGHT!</a></p>
+  <p><a class="btn btn-lg btn-success" ng-href="javascript: void(0);" ng-click="playGame()">FIGHT!</a></p>
+
+  <div ng-switch on="gameResult">
+    <div ng-switch-when="win"> {{myWeapon}} beats {{opponentWeapon}}! You win! </div>
+    <div ng-switch-when="lose">  {{opponentWeapon}} beats {{myWeapon}}! You lose! </div>
+    <div ng-switch-when="tie"> Both players chose {{myWeapon}}! Tie! </div>
+  </div>
+
 </div>
 
 <div class="footer">
