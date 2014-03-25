@@ -7,15 +7,15 @@
   <h3 class="text-muted">rockPaperScissors</h3>
 </div>
 
-<div class="jumbotron">
+<div class="jumbotron"d>
   <h2>Rock Paper Scissors!</h2>
   The Hulk is ng-ry. You won't like him when he's ng-ry.
-  Name: <input value="your name here"></br>
+  Name: <input ng-model="name"></br>
   Choose your weapon and fight!
 
   <select></select>
 
-  <h4><b>(your name here)</b> vs. <b>The Hulk</b></h4>
+  <h4><b>{{name}}</b> vs. <b>The Hulk</b></h4>
 
   <img src="http://cdn-0.adherents.com/lit/comics/img/h/Hulk.jpg" height="220px;" width="150px;"></img>
 

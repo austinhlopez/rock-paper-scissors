@@ -1,4 +1,5 @@
 'use strict'
 
 angular.module('rockPaperScissorsApp')
-  .controller 'RockpaperscissorsctrlCtrl', ($scope) ->
+  .controller 'RockpaperscissorsCtrl', ($scope) ->
+    $scope.name = "(your name here)"
