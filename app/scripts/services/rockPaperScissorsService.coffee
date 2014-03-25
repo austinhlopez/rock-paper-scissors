@@ -8,7 +8,7 @@ angular.module('rockPaperScissorsApp')
       weapons = ["rock", "paper", "scissors"]
 
       rockPaperScissorsService.getRandomWeapon = () ->
-        randomIndex = Math.random() * (weapons.length)
+        randomIndex = parseInt(Math.random() * (weapons.length))
         return weapons[randomIndex]
 
       rockPaperScissorsService.getGameResult = (playerWeapon, opponentWeapon) ->

@@ -9,6 +9,8 @@ angular.module('rockPaperScissorsApp')
       $scope.weapons = ["rock", "paper", "scissors"]
 
       $scope.playGame = () ->
+        console.log rockPaperScissorsService
         $scope.opponentWeapon = rockPaperScissorsService.getRandomWeapon()
-        $scope.gameResult = rockPaperScissorsService.getGameResult($scope.playerWeapon, $scope.opponentWeapon)
+        console.log $scope.playe
+        $scope.gameResult = rockPaperScissorsService.getGameResult($scope.myWeapon, $scope.opponentWeapon)
     ]

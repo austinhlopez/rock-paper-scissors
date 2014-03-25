@@ -7,7 +7,7 @@
       weapons = ["rock", "paper", "scissors"];
       rockPaperScissorsService.getRandomWeapon = function() {
         var randomIndex;
-        randomIndex = Math.random() * weapons.length;
+        randomIndex = parseInt(Math.random() * weapons.length);
         return weapons[randomIndex];
       };
       rockPaperScissorsService.getGameResult = function(playerWeapon, opponentWeapon) {
