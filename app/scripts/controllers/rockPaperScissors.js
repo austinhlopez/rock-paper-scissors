@@ -1,7 +1,8 @@
 (function() {
   'use strict';
   angular.module('rockPaperScissorsApp').controller('rockPaperScissorsCtrl', function($scope) {
-    return $scope.name = "(your name here)";
+    $scope.name = "(your name here)";
+    return $scope.weapons = ["rock", "paper", "scissors"];
   });
 
 }).call(this);

@@ -13,7 +13,7 @@
   Name: <input ng-model="name"></br>
   Choose your weapon and fight!
 
-  <select></select>
+  <select ng-model="myWeapon" ng-options="weapon for weapon in weapons"></select>
 
   <h4><b>{{name}}</b> vs. <b>The Hulk</b></h4>
 
